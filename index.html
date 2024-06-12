@@ -73,6 +73,12 @@
                 <a href="" target="_blank">Minyong Ahn</a><sup>3</sup>
               </span>
               <span class="author-block">
+                <a href="" target="_blank">Dongyoon Hahm</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="" target="_blank">Haeone Lee</a><sup>1</sup>
+              </span>
+              <span class="author-block">
                 <a href="https://changyeon.page/" target="_blank">Changyoen Kim</a><sup>1</sup>
               </span>
               <span class="author-block">
@@ -94,7 +100,7 @@
                 <span class="icon">
                   <i class="ai ai-arxiv"></i>
                 </span>
-                <span>arXiv (ICLR version)</span>
+                <span>arXiv (ver.1.2.0)</span>
               </a>
             </span>
 
@@ -102,7 +108,7 @@
             <span class="link-block">
               <a href="https://github.com/gimme1dollar/b-moca" target="_blank" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Code</span>
+                <span>Code (ver.2.0.1)</span>
               </a>
             </span>
 
@@ -114,22 +120,42 @@
   </div>
 </section>
 
-
 <!-- Header section -->
-<section class="hero is-small">
+<section class="hero is-light">
   <div class="hero-body">
     <h2 class="subtitle has-text-centered" style="font-size: 24px;">
       <em><strong>B-MoCA</strong></em> can serve as a testbed for mobile device control agents across diverse device configurations
     </h2>
   </div>
-</section>
+  <div class="hero-body">
+    <div class="container">
+      <md-block>
+        <h2 class="subtitle" style="font-size: 24px;">
+        <span class="negative-br"></span>
+        [Release Notes]
+        </h2>
+        <strong>(ver 2.0.1)</strong> 
+        We added 30 more daily tasks (total 100 tasks).
+        We updated the <u>observation parsing function</u> (<a href="https://github.com/gimme1dollar/b-moca/blob/release/ver.2.0.1/bmoca/agent/foundation_model/utils.py#L29">link</a>), which improves the performance of LLM agents by a large margin.
+        The paper (with analysis using GPT-4o and Gemini-1.5-pro) will be updated soon.
+        <br>
+        <span class="small-br"></span>
+        <strong>(ver 1.2.0)</strong> 
+        First public release!
+        We presented 70 daily tasks on interactive real Android emulator environments with a <u>randomization feature over the device settings</u>.
+        We conducted an analysis using GPT-4/GPT-4V and Gemini-1.0-pro/Gemini-1.0-pro-V.
+        The paper (v1; <a href="https://arxiv.org/abs/2404.16660v1">link</a>) and code (ver.1.2.0; <a href="https://github.com/gimme1dollar/b-moca/tree/release/ver.1.2.0">link</a>) are available.
+    </md-block>
+    </div>
+</section> 
 <!-- Header section -->
+
 
 <!-- Demonstrations section -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-
+      <br>
       <div class="content has-text-centered">
         <div class="columns is-centered">
           <div class="column">
@@ -238,6 +264,38 @@
 </section>
 < End demonstration section -->
 
+
+<!-- Task section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="title-color">
+          <h2 class="title" style="text-align: center; color: white;"> Numerous Daily Tasks </h2>
+      </div>
+  
+      <md-block>
+        <br>
+        B-MoCA presents 100 daily tasks that are grounded in realistic situations.
+        The tasks span 10+ applications, including the thrid-party app (e.g., Instagram).
+        These require the agent fundamental skills for controlling mobile devices, 
+        including navigation over the multiple pages and manipulating various UI elements.
+        The below shows the statistics of the tasks, distribution over the app category and the episode length.
+        <br><br>
+      </md-block>
+    </div>
+
+    <div class="hero-body">
+      <img src="static/images/task_statistics.png" alt="MY ALT TEXT"
+        style="display: block; margin: 0 auto; width: 70%; height: auto;"
+        />
+    </div>
+</div>
+</section>
+<!-- End Task section -->
+
+
+
 <!-- Environment section -->
 <section class="hero is-small">
   <div class="hero-body">
@@ -295,8 +353,13 @@
       We also compare open-source LLMs (Llama2, <span style="color: red">Llama3</span>, and AgentLM).
       We further analyze different design choices (e.g., Set-of-Mark prompting for MLLM agents or effects of
       the number of training environments for VLUI agents) 
-      for the agents. The lack of proficiencies of these agents in complex scenarios calls for future work!
+      for the agents. The lack of proficiencies of these agents in complex scenarios calls for future work! -->
+      By employing the environments we configure, we benchmark state-of-the-art closed-source/open-source LLMs 
+      (GPT-4o, Gemini-1.5-pro, and Llama3) and MLLMs (GPT-4o, Gemini-1.5-pro) as well as custom agents trained from scratch. 
+      We further analyze different design choices for the agents. 
+      The lack of proficiencies of these agents in complex scenarios calls for future work!
       <br><br>
+      <div align="center">For more detailed results based on the updated observation parsing function, please refer the paper which will be updated soon!</div>
     </md-block>
   </div>
 
@@ -336,7 +399,6 @@
                 
               </script>
 
-              <!-- Table (Main Result) -->
               <div title="Main Results" class="lib_examples" id="BoardPanel1" style="display: block;">
                 <md-block>
                   LLM agents are with three few-shot examples. MLLM agents are with one (Gemini-Pro-V) or three (GPT-4V) examples but without Set-of-Mark.
@@ -407,7 +469,6 @@
                   </tr>
                 </table>
               </div>
-              <!-- End Table (Main Result) -->
 
 
               <div title="LLM Agent Analysis" class="lib_examples" id="BoardPanel2" style="display: none;">
@@ -563,8 +624,6 @@
                   </tr>
                 </table>
               </div>
-              <!-- End Table (VLUI) -->
-
 
             </div>
           </div>
