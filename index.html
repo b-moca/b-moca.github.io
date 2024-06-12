@@ -73,12 +73,6 @@
                 <a href="" target="_blank">Minyong Ahn</a><sup>3</sup>
               </span>
               <span class="author-block">
-                <a href="" target="_blank">Dongyoon Hahm</a><sup>1</sup>
-              </span>
-              <span class="author-block">
-                <a href="" target="_blank">Haeone Lee</a><sup>1</sup>
-              </span>
-              <span class="author-block">
                 <a href="https://changyeon.page/" target="_blank">Changyoen Kim</a><sup>1</sup>
               </span>
               <span class="author-block">
@@ -95,7 +89,7 @@
             <div class="column has-text-centered">
               <div class="publication-links">
               <span class="link-block">
-                <a href="" target="_blank"
+                <a href="https://arxiv.org/abs/2404.16660" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="ai ai-arxiv"></i>
@@ -106,9 +100,9 @@
 
             <!-- Github link -->
             <span class="link-block">
-              <a href="https://github.com/b-moca/b-moca" target="_blank" class="external-link button is-normal is-rounded is-dark">
+              <a href="https://github.com/gimme1dollar/b-moca" target="_blank" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Code (update version)</span>
+                <span>Code</span>
               </a>
             </span>
 
@@ -244,38 +238,6 @@
 </section>
 < End demonstration section -->
 
-
-<!-- Task section -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-
-      <div class="title-color">
-          <h2 class="title" style="text-align: center; color: white;"> Numerous Daily Tasks </h2>
-      </div>
-  
-      <md-block>
-        <br>
-        B-MoCA presents 100 daily tasks that are grounded in realistic situations.
-        The tasks span 10+ applications, including the thrid-party app (e.g., Instagram).
-        These require the agent fundamental skills for controlling mobile devices, 
-        including navigation over the multiple pages and manipulating various UI elements.
-        The below shows the statistics of the tasks, distribution over the app category and the episode length.
-        <br><br>
-      </md-block>
-    </div>
-
-    <div class="hero-body">
-      <img src="static/images/task_statistics.png" alt="MY ALT TEXT"
-        style="display: block; margin: 0 auto; width: 70%; height: auto;"
-        />
-    </div>
-</div>
-</section>
-<!-- End Task section -->
-
-
-
 <!-- Environment section -->
 <section class="hero is-small">
   <div class="hero-body">
@@ -317,6 +279,7 @@
 </section>
 <!-- End Environment section -->
 
+
 <!-- Baselines section -->
 <section>
   <div class="container">
@@ -332,13 +295,8 @@
       We also compare open-source LLMs (Llama2, <span style="color: red">Llama3</span>, and AgentLM).
       We further analyze different design choices (e.g., Set-of-Mark prompting for MLLM agents or effects of
       the number of training environments for VLUI agents) 
-      for the agents. The lack of proficiencies of these agents in complex scenarios calls for future work! -->
-      By employing the environments we configure, we benchmark state-of-the-art closed-source/open-source LLMs 
-      (GPT-4o, Gemini-1.5-pro, and Llama3) and MLLMs (GPT-4o, Gemini-1.5-pro) as well as custom agents trained from scratch. 
-      We further analyze different design choices for the agents. 
-      The lack of proficiencies of these agents in complex scenarios calls for future work!
+      for the agents. The lack of proficiencies of these agents in complex scenarios calls for future work!
       <br><br>
-      <div align="center">For more details, please refer the paper!</div>
     </md-block>
   </div>
 
@@ -378,6 +336,7 @@
                 
               </script>
 
+              <!-- Table (Main Result) -->
               <div title="Main Results" class="lib_examples" id="BoardPanel1" style="display: block;">
                 <md-block>
                   LLM agents are with three few-shot examples. MLLM agents are with one (Gemini-Pro-V) or three (GPT-4V) examples but without Set-of-Mark.
@@ -448,6 +407,7 @@
                   </tr>
                 </table>
               </div>
+              <!-- End Table (Main Result) -->
 
 
               <div title="LLM Agent Analysis" class="lib_examples" id="BoardPanel2" style="display: none;">
@@ -603,6 +563,8 @@
                   </tr>
                 </table>
               </div>
+              <!-- End Table (VLUI) -->
+
 
             </div>
           </div>
